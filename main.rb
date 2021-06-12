@@ -12,6 +12,7 @@ require_relative 'models/user'
 require_relative 'helpers/sessions_helper'
 
 require_relative 'controllers/questions_controller'
+require_relative 'controllers/answers_controller'
 require_relative 'controllers/users_controller'
 require_relative 'controllers/sessions_controller'
 

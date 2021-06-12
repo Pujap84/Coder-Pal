@@ -1,13 +1,14 @@
-<form action="/questions/:question_id/answers" method="POST">
-    <label for="question_id">
-        Question_id:
+<form action="/questions/<%= question['id'] %>/answers" method="POST">
+    <label for="title">
+        Title:
     </label>
-    <input name="question_id"/>
+     <p><%= question["title"] %></p>
 
     <label for="body">
         Body:
     </label>
     <input name="body" />
+    
 
-    <input type="submit" value="Ask a question" />
+    <input type="submit" value="Add an answer" />
 </form>

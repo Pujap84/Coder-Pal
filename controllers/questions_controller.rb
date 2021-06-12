@@ -1,6 +1,6 @@
 get '/questions' do
 
-    results = question_id(id)
+    results = all_questions()
 
     erb :'/questions/index', locals: { all_questions: results }
 
@@ -55,7 +55,7 @@ end
 
 delete '/questions/:id' do |id|
     question = question_id(id)[0]
-
+    
 
     delete_question(id)
 

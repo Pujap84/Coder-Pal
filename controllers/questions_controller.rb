@@ -23,20 +23,17 @@ end
 
 get '/questions/:id' do |id|
 
-    puts "id of questions:" + id
-
-    results = question_id(id)
-
-    erb :'/questions/show', locals: { question: results[0]}
+    question = find_question(id)
+    answers = find_answers_by_question_id(id)
+    erb :'/questions/show', locals: { question: question, answers: answers}
 end
-
 
 get '/questions/:id/edit' do |id|
 
-    results = question_id(id)
+    results = find_question(id)
     
 
-    erb :'questions/edit', locals: { question: results[0]}
+    erb :'questions/edit', locals: { question: results}
 end
 
 
@@ -54,7 +51,7 @@ end
 
 
 delete '/questions/:id' do |id|
-    question = question_id(id)[0]
+    question = find_question(id)
     
 
     delete_question(id)

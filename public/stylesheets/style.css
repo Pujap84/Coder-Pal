@@ -1,0 +1,87 @@
+
+
+.question-item .info {
+    display:list-item 
+    align-items: left;
+    gap: 10px;
+}
+
+.all-questions{
+    font-display: 0 auto  ;
+}
+
+body {
+    background-color:thistle  ;
+    font-family:monospace ;
+    padding-left: 30px;
+}
+
+
+input[type=text], input[type=password] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #dedbdb;
+}
+  
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color:powderblue;
+    outline: none;
+}
+  
+
+button {
+    background-color:powderblue;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
+
+.signupbtn {
+    float: left;
+    width: 30%;
+}
+
+.container {
+    padding: 16px;
+}
+
+.signup-details {
+    display:contents ;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #3866d3;
+    padding-top: 50px;
+}
+
+.signup-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 2px solid #888;
+    border-radius: 30px;
+    padding-left: 40px;
+    width: 40%; /* Could be more or less, depending on screen size */
+}
+
+hr {
+    border: 1px solid #e9e7e7;
+    margin-bottom: 25px;
+    margin-right: 30px;
+}

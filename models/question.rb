@@ -8,8 +8,8 @@ def create_question(title, body, votes, user_id)
     run_sql(sql_query, params)
 end
 
-def question_id(id)
-    run_sql("SELECT * FROM questions WHERE id=$1", [id])
+def find_question(id)
+    run_sql("SELECT * FROM questions WHERE id=$1", [id])[0]
 end
 
 def question_update(id, title, body)

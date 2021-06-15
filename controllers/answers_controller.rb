@@ -5,8 +5,8 @@ get '/questions/:question_id/answers' do
 end
 
 get '/questions/:question_id/answers/create' do
-    results = question_id(params[:question_id])
-    question = results[0]
+    results = find_question(params[:question_id])
+    question = results
     erb :'answers/new', locals: {question: question}
 end
 
@@ -21,46 +21,47 @@ post '/questions/:question_id/answers' do
     redirect "/questions/#{question_id}"
 end
 
-get '/questions/:question_id/answers/:id' do |id|
+# get '/questions/:question_id/answers/:id' do |question_id, id|
 
-    puts "id of questions:" + id
+#     puts "id of questions:" + id
 
-    results = question_id([:question_id])
-    question = results[0]
+#     results = answer_id([:question_id])
+#     question = results[0]
 
-    erb :'/answers/show', locals: { question: question}
+#     erb :'/answers/show', locals: { question: question}
+# end
+
+
+get '/questions/:question_id/answers/:id/edit' do |question_id, id|
+    question_id = params[:question_id]
+    answer_id = params[:id]
+    question = find_question(question_id)
+    answer = find_answer(id)
+
+    erb :'/answers/edit', locals: { question: question, answer: answer}
 end
 
 
-get '/questions/:question_id/answers/:id/edit' do |id|
-
-    results = question_id(id)
-    
-
-    erb :'answers/edit', locals: { question: results[0]}
-end
-
-
-put '/questions/:id' do |id|
-
-    title = params[:title]
+put '/questions/:question_id/answers/:id' do |question_id, id|
+    question_id = params[:question_id]
     body = params[:body]
 
 
-    results = question_update(id, title, body)
+    results = answer_update(id, body)
 
-    redirect "/questions/#{id}"
+    redirect "/questions/#{question_id}"
 
 end
 
 
-delete '/questions/:id' do |id|
-    question = question_id(id)[0]
+delete '/questions/:question_id/answers/:id' do |question_id, id|
+    question_id = params[:question_id]
+    answer = find_answer(id)
     
 
-    delete_question(id)
+    delete_answer(id)
 
-    redirect "/questions"
+    redirect "/questions/#{question_id}"
 
 end
 

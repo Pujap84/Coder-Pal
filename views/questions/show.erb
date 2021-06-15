@@ -11,4 +11,14 @@
         </form>
     <% end %>
     <a href="/questions/<%= question['id'] %>/answers/create">Add an answer</a>
+    <% answers.each do |answer| %>
+        <h4><%= answer['body'] %></h4>
+        <% if answer["user_id"] == session[:user_id] %>
+            <a href="/questions/<%= question['id'] %>/answers/<%= answer['id'] %>/edit">Edit</a>
+            <form action="/questions/<%= question['id'] %>/answers/<%= answer['id'] %>" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="submit" value="delete">
+            </form>
+        <% end %>
+    <% end %>
 <% end %>

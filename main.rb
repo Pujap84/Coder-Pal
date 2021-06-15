@@ -7,6 +7,7 @@ enable :sessions
 require_relative 'db/db'
 
 require_relative 'models/question'
+require_relative 'models/answer'
 require_relative 'models/user'
 
 require_relative 'helpers/sessions_helper'

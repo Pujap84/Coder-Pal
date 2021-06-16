@@ -1,24 +1,36 @@
-<h1><%= question['title'] %></h1>
-<h2><%= question['body'] %></h2>
-<aside><%= question['votes'] %></aside>
-<br />
-<% if is_logged_in? %>
-    <% if question["user_id"] == session[:user_id] %>
-        <a href="/questions/<%= question["id"] %>/edit">Edit</a>
-        <form action="/questions/<%= question["id"] %>" method="POST">
-            <input type="hidden" name="_method" value="DELETE">
-            <input type="submit" value="delete">
-        </form>
-    <% end %>
-    <a href="/questions/<%= question['id'] %>/answers/create">Add an answer</a>
-    <% answers.each do |answer| %>
-        <h4><%= answer['body'] %></h4>
-        <% if answer["user_id"] == session[:user_id] %>
-            <a href="/questions/<%= question['id'] %>/answers/<%= answer['id'] %>/edit">Edit</a>
-            <form action="/questions/<%= question['id'] %>/answers/<%= answer['id'] %>" method="POST">
+<div class="sidebar">
+    <nav>
+        <div class="signup"><a href="/sign_up">Sign Up</a></div>
+        <a href="/login">Login</a>
+        <a href="/home">Home</a>
+        <a href="/About-us">About Us</a>
+        <a href="/Questions">Questions</a>
+    </nav>
+</div>
+
+<div class="body-text">
+    <h2><%= question['title'] %></h2>
+    <h3><%= question['body'] %></h3>
+    <aside><%= question['votes'] %></aside>
+    <br />
+    <% if is_logged_in? %>
+        <% if question["user_id"] == session[:user_id] %>
+            <a href="/questions/<%= question["id"] %>/edit">Edit</a>
+            <form action="/questions/<%= question["id"] %>" method="POST">
                 <input type="hidden" name="_method" value="DELETE">
                 <input type="submit" value="delete">
             </form>
         <% end %>
+        <a href="/questions/<%= question['id'] %>/answers/create">Add an answer</a>
+        <% answers.each do |answer| %>
+            <h3><%= answer['body'] %></h3>
+            <% if answer["user_id"] == session[:user_id] %>
+                <a href="/questions/<%= question['id'] %>/answers/<%= answer['id'] %>/edit">Edit</a>
+                <form action="/questions/<%= question['id'] %>/answers/<%= answer['id'] %>" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="submit" value="delete">
+                </form>
+            <% end %>
+        <% end %>
     <% end %>
-<% end %>
+</div>

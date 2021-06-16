@@ -1,14 +1,27 @@
-<form action="/questions/<%= question['id'] %>/answers" method="POST">
-    <label for="title">
-        Title:
-    </label>
-     <p><%= question["title"] %></p>
+<div class="sidebar">
+    <nav>
+        <div class="signup"><a href="/sign_up">Sign Up</a></div>
+        <a href="/login">Login</a>
+        <a href="/home">Home</a>
+        <a href="/About-us">About Us</a>
+        <a href="/Questions">Questions</a>
+    </nav>
+</div>
 
-    <label for="body">
-        Body:
-    </label>
-    <input name="body" />
+<div class="body-text">
+    <form action="/questions/<%= question['id'] %>/answers" method="POST">
+        <label for="title">
+            Title:
+        </label>
+         <p><%= question["title"] %></p>
     
+        <label for="body">
+            Body:
+        </label>
+        <input name="body" />
+        
+    
+        <input type="submit" value="Add an answer" />
+    </form>
+</div>
 
-    <input type="submit" value="Add an answer" />
-</form>

@@ -1,3 +1,26 @@
+get '/home' do
+
+    results = all_questions()
+
+    erb :'/questions/index', locals: { all_questions: results }
+
+end
+
+get '/About-us' do
+
+    erb :'questions/about'
+
+end
+
+get '/Questions' do
+
+    results = all_questions()
+
+    erb :'/questions/index', locals: { all_questions: results }
+
+end
+
+
 get '/questions' do
 
     results = all_questions()

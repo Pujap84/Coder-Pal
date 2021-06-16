@@ -1,8 +1,7 @@
-<h2>Signup Form</h2>
 <div class="signup-details">
     <form class="signup-content" action="/users" method="POST">
-        <div class="container"></div>
-            <h1>Sign up</h1>
+        <div class="container">
+            <h2>Sign up</h2>
             <p>Please fill in this form to create an account</p>
             <hr>
             <label for="name">
@@ -22,6 +21,8 @@
 
             <div class="clearfix">
                 <button type="submit" class="signupbtn">Sign Up</button>
+                <button type="reset" class="signupbtn">Reset</button>
+                <button type="cancel" onclick="javascript:window.location='/questions';">Cancel</button>
             </div>
         </div>
     </form>

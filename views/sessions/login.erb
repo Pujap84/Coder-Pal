@@ -1,25 +1,31 @@
-<h1>Login</h1>
-<%= error_message %>
+<h2><%= error_message %></h2>
 
-<section class="signup-details">
-    <form action="/sessions" method="POST">
-
-        <label for="name">
-            Name:
-        </label>
-        <input name="name" /><br>
-    
-        <br><label for="email">
-            Email:
-        </label>
-        <input name="email" /><br>
-    
-        <br><label for="password">
-            Password:
-        </label>
-        <input type="password" name="password"  /><br>
-    
-        <br><button>Login</button>
-    
+<div class="signup-details">
+    <form class="signup-content" action="/sessions" method="POST">
+        <div class="container">
+            <h2>Login</h2>
+            <p>Please Login with your details</p>
+            <hr>
+            <label for="name">
+                Name:
+            </label>
+            <input type="text" placeholder="Enter name" name="name" required>
+        
+            <br><label for="email">
+                Email:
+            </label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+        
+            <br><label for="password">
+                Password:
+            </label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+        
+            <div class="clearfix">
+                <button class="signupbtn">Login</button>
+                <button type="reset" class="signupbtn">Reset</button>
+                <button type="cancel" onclick="javascript:window.location='/questions';">Cancel</button>
+            </div>
+        </div>
     </form>
-</section>
+</div>

@@ -173,18 +173,14 @@ hr {
 }
 
 h4 {
-    font-weight: lighter;
-    font-style: normal;
+    font-weight: 100;
     font-size: 12px;
-    border-style: solid;
-    border-color: navy;
     margin-right: 50px;
 
 }
 h3 {
-    font-weight:bold;
-    font-style:normal;
-    font-size: 14px;
+    font-weight: 600;
+    font-size: 16px;
 }
 .ask-question {
     display: inline;

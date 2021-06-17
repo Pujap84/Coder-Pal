@@ -15,7 +15,7 @@
             <aside><%= question['votes'] %></aside>
             <div class="question-edit-delete">
                 <h3><%= question['body'] %></h3>
-                <a class="button" href="/questions/<%= question["id"] %>/edit">Edit</a>
+                <br><a class="button" href="/questions/<%= question["id"] %>/edit">Edit</a>
                 <form action="/questions/<%= question["id"] %>" method="POST">
                     <input type="hidden" name="_method" value="DELETE">
                     <input type="submit" value="delete">

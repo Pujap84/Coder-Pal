@@ -8,20 +8,17 @@
     </nav>
 </div>
 
-<div class="body-text">
+<div class="answer-new-text">
     <form action="/questions/<%= question['id'] %>/answers" method="POST">
-        <label for="title">
-            Title:
-        </label>
-         <p><%= question["title"] %></p>
+        <p>Title: <%= question["title"] %></p>
     
         <label for="body">
             Body:
         </label>
-        <input name="body" />
+        <input name="body" /><br>
         
     
-        <input type="submit" value="Add an answer" />
+        <br><input type="submit" value="Add an answer" />
     </form>
 </div>
 

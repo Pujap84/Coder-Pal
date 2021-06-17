@@ -8,29 +8,45 @@
     </nav>
 </div>
 
-<div class="body-text">
-    <h2><%= question['title'] %></h2>
-    <h3><%= question['body'] %></h3>
-    <aside><%= question['votes'] %></aside>
-    <br />
+<div class="question-show-text">
     <% if is_logged_in? %>
         <% if question["user_id"] == session[:user_id] %>
-            <a href="/questions/<%= question["id"] %>/edit">Edit</a>
-            <form action="/questions/<%= question["id"] %>" method="POST">
-                <input type="hidden" name="_method" value="DELETE">
-                <input type="submit" value="delete">
-            </form>
+            <h2><%= question['title'] %></h2>
+            <aside><%= question['votes'] %></aside>
+            <div class="question-edit-delete">
+                <h3><%= question['body'] %></h3>
+                <a class="button" href="/questions/<%= question["id"] %>/edit">Edit</a>
+                <form action="/questions/<%= question["id"] %>" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="submit" value="delete">
+                </form>
+            </div>
+
+
+        <%else %>
+            <h2><%= question['title'] %></h2>
+            <h3><%= question['body'] %></h3>
+            <aside><%= question['votes'] %></aside>
+            <hr>
         <% end %>
-        <a href="/questions/<%= question['id'] %>/answers/create">Add an answer</a>
+        <h2>Answers</h2>
+        <br><a class="button" href="/questions/<%= question['id'] %>/answers/create">Add an answer</a>
+        <hr>
         <% answers.each do |answer| %>
             <h3><%= answer['body'] %></h3>
             <% if answer["user_id"] == session[:user_id] %>
-                <a href="/questions/<%= question['id'] %>/answers/<%= answer['id'] %>/edit">Edit</a>
+                <a class="button" href="/questions/<%= question['id'] %>/answers/<%= answer['id'] %>/edit">Edit</a>
                 <form action="/questions/<%= question['id'] %>/answers/<%= answer['id'] %>" method="POST">
                     <input type="hidden" name="_method" value="DELETE">
                     <input type="submit" value="delete">
                 </form>
+                <hr>
             <% end %>
         <% end %>
+    <%else %>
+        <h2><%= question['title'] %></h2>
+        <h3><%= question['body'] %></h3>
+        <aside><%= question['votes'] %></aside>
+        <hr>
     <% end %>
 </div>

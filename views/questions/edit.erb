@@ -8,7 +8,7 @@
     </nav>
 </div>
 
-<div class="body-text">
+<div class="question-edit-text">
     <form action="/questions/<%= question["id"] %>" method="POST">
         <input type="hidden" name="_method" value="PUT" >
         <label for="title">
@@ -16,12 +16,12 @@
         </label>
         <input name="title" value="<%= question["title"] %>" /><br>
     
-        <label for="body">
+        <br><label for="body">
             Body:
         </label>
         <input name="body" value="<%= question["body"] %>" /><br>
     
-        <input type="submit" value= "update" />
+        <br><input type="submit" value= "update" />
     </form>
 </div>
 

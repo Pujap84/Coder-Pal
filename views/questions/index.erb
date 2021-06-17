@@ -15,12 +15,15 @@
 
     <div class="body-text">
         <% if is_logged_in? %>
-            Welcome, <%= current_user()['email'] %>!
+            <h2>Welcome, <%= current_user()['name'] %>!</h2>
             <form action="/sessions" method="POST">
                 <input type="hidden" name="_method" value="DELETE">
                 <input type="submit" value="Logout"/>
             </form>
-            <h2>Questions</h2>
+            <div class="ask-question">
+                <h2>Questions</h2>
+                <a class="button" href="/questions/create">Ask a question</a>
+            </div>  
 
 
             <section class="all-questions">
@@ -32,7 +35,7 @@
                         <h4><%= question["body"] %></h4>
     
                         <% if question["user_id"] == session[:user_id] %>
-                            <a href="/questions/<%= question["id"] %>/edit">Edit</a>
+                            <a class="button" href="/questions/<%= question["id"] %>/edit">Edit</a>
                         <% end %>
                     </section>
         
@@ -40,7 +43,7 @@
                 <% end %>
             </section>
     
-            <br><a href="/questions/create">Ask a question</a>
+
         <% else %>
             <h2>Questions</h2>
             <section class="all-questions">
@@ -50,8 +53,6 @@
                     <section class="info">
                         <h3><a href="/questions/<%= question["id"] %>"><%= question["title"] %></a></h3>
                         <h4><%= question["body"] %></h4>
-    
-            
                     </section>
                 
                 </section>

@@ -54,7 +54,7 @@
         <div class="all-answers">
             <% answers.each do |answer| %>
                 <div class="answer-edit-delete">   
-                    <h3><%= answer['body'] %></h3>
+                    <h4><%= answer['body'] %></h4>
                     <% if answer["user_id"] == session[:user_id] %>
                         <a class="button" href="/questions/<%= question['id'] %>/answers/<%= answer['id'] %>/edit">Edit</a>
                         <form action="/questions/<%= question['id'] %>/answers/<%= answer['id'] %>" method="POST">

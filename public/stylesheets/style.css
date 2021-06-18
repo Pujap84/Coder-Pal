@@ -24,15 +24,15 @@ body {
     border-bottom: #e1e1e1 solid 1px;
 }
 
-.question-item .info {
-
-    align-items: left;
-    gap: 10px;
+.info {
+    border: 1px solid transparent;
+    padding: 10px;
 }
+
 .question-item {
     margin-bottom: 60px;
     background-color: rgb(227, 235, 238);
-    padding: 50px;
+    padding: 40px;
 }
 
 .all-questions{
@@ -144,10 +144,7 @@ hr {
     display: block;
     text-decoration: none;
     color: rgb(34, 34, 34);
-    border-bottom: 3px solid transparent;
-    border-top: 3px solid transparent;
-    border-right: 3px solid transparent;
-    border-left: 3px solid transparent;
+    border: 3px solid transparent;
 }
 .sidebar h4 {
     font-size: 16px;
@@ -167,7 +164,8 @@ hr {
     font-weight: bold;
     border: 3px solid transparent;
     background-color: rgb(227, 235, 238);
-    padding: 10px 20px;
+    padding: 8px;
+    font-size: 14px;
 }
     
 .body-text {
@@ -231,49 +229,60 @@ h2 {
     font-size: 36px;
 }
 
-.ask-question {
+.ask-question, .question-answer {
     display: flex;
-    gap: 50px;
-    align-items: baseline;
+    gap: 650px;
+    align-items: center;
 }
-.ask-question a {
-    padding-bottom: 20px;
+
+.ask-question h2, .question-answer h2 {
+    margin-left: 50px;
+}
+
+.ask-question a, .question-answer a {
+    padding: .4em;
     margin-bottom: 10px;
-    margin-right: 350px;
-    width: auto;
+    margin-right: 50px;
     font-size: 20px;
+    border: 1px solid transparent;
+    text-align: center;
+    background-color :rgb(203, 168, 205);
+    color: rgb(205, 220, 226);
 }
 
-.ask-question a:hover, .question-edit-delete a:hover, .question-answer a:hover {
+
+.ask-question a:hover, .question-answer a:hover {
     cursor: pointer;
     opacity: .7;
-    border-width: 3px;
-    font-weight: bolder;
-    border: 3px solid transparent;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    border: 1px solid transparent;
     background-color: rgb(227, 235, 238);
-    padding: 10px 20px;
+    padding: .4em;
+    border-radius: 10px;
+    color: rgb(184, 130, 186);
 }
-.question-item a:hover {
+
+.question-info-edit a, .question-show-edit a, .question-show-delete form, .answer-edit-delete a, .answer-edit-delete form  {
     cursor: pointer;
     opacity: .7;
     border-width: 3px;
-    font-weight: bolder;
-    border: 3px solid transparent;
-    background-color: rgb(198, 223, 232);
-    padding: 10px 20px;
-}
+    border: 1px solid transparent;
+    padding: 10px;
 
-.answer-edit-delete a:hover {
+}
+.question-info-edit a:hover, .question-show-edit a:hover, .question-show-delete form:hover, .answer-edit-delete a:hover, .answer-edit-delete form:hover {
     cursor: pointer;
     opacity: .7;
     border-width: 3px;
-    font-weight: bolder;
-    border: 3px solid transparent;
     background-color: rgb(198, 223, 232);
-    padding: 10px 20px;
+    border: 1px solid transparent;
+    padding: 10px;
 }
 
-.question-edit-delete, .question-answer, .answer-edit-delete {
+
+.question-edit-delete, .answer-edit-delete {
     display: flex;
     gap: 20px;
     align-items: baseline;
@@ -290,5 +299,5 @@ h2 {
 .answer-edit-delete {
     margin-bottom: 60px;
     background-color: rgb(227, 235, 238);
-    padding: 50px;
+    padding: 40px;
 }

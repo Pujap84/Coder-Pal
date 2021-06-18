@@ -20,17 +20,17 @@
 </div>
 
 <div class="question-edit-text">
-    <form action="/questions/<%= question["id"] %>" method="POST">
+    <form action="/questions/<%= question['id'] %>" method="POST">
         <input type="hidden" name="_method" value="PUT" >
         <label for="title">
             Title:
         </label>
-        <input name="title" value="<%= question["title"] %>" /><br>
+        <input name="title" value="<%= question['title'] %>" /><br>
     
         <br><label for="body">
             Body:
         </label>
-        <textarea name="" value="<%= question['body'] %>" id="" cols="30" rows="10"></textarea><br>
+        <textarea name="body" value="<%= question['body'] %>" id="" cols="30" rows="10"></textarea><br>
 
         <br><input type="submit" value= "update" />
     </form>

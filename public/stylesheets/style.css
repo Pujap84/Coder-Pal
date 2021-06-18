@@ -34,9 +34,9 @@ body {
     background-color: rgb(227, 235, 238);
     padding: 40px;
 }
-.question-item:hover {
+.question-item:hover, .answer-edit-delete:hover {
     margin-bottom: 60px;
-    background-color: rgb(198, 219, 225);
+    background-color: rgb(216, 234, 238);
     padding: 40px;
 }
 

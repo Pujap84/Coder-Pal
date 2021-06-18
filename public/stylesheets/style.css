@@ -7,6 +7,7 @@ body {
     margin-right: 0px;
     color: rgb(34, 34, 34);
     font-size: 18px;
+    background-image: url(/images/coderpal.png);
 }
 
 .heading {
@@ -18,8 +19,9 @@ body {
     color:rgb(114, 156, 182);
     text-align: center;
     padding-top: 30px;
+    padding-bottom: 20px;
     background-color: rgb(242, 240, 240);
-    border-bottom: rgb(215, 215, 215) solid 1px;
+    border-bottom: #e1e1e1 solid 1px;
 }
 
 .question-item .info {
@@ -27,25 +29,39 @@ body {
     align-items: left;
     gap: 10px;
 }
+.question-item {
+    margin-bottom: 60px;
+    background-color: rgb(227, 235, 238);
+    padding: 50px;
+}
 
 .all-questions{
     font-display: 0 auto;
     margin-bottom: 60px;
+    margin-right: 50px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 
 input[type=text], input[type=password] {
     width: 90%;
-    padding: 5px;
-    margin: 5px 0 10px 0;
-    display: inline-block;
+    padding: 15px;
+    padding-left: 30px;
+    margin: 20px;
+    display: flex;
     border: none;
     background: #dedbdb;
+}
+label {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    padding-top: 10px;
 }
   
 
 input[type=text]:focus, input[type=password]:focus {
-    background-color:#0a5e9f;
     outline: none;
 }
   
@@ -54,11 +70,12 @@ button {
     background-color:powderblue;
     color: black;
     padding: 10px 20px;
-    margin: 8px 0;
+    margin: 10px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     width: 100%;
+    height: 50px;
     opacity: 0.9;
 }
 
@@ -67,33 +84,39 @@ button:hover {
 }
 
 .signupbtn {
-    margin-left: 40px;
+    margin-left: 60px;
     width: 30%;
 }
 
 .container {
-    padding: 16px;
+    padding: 20px;
 }
 
 .signup-details {
-    display:contents ;
+    display: contents ;
     position: fixed;
     z-index: 1;
-    left: 0;
+    left: 30px;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: #3866d3;
     padding-top: 50px;
+    font-family: Helvetica;
 }
 
 .signup-content {
     margin: 5% auto 15% auto;
-    border: 2px solid #888;
+    border: 2px solid rgb(235, 233, 233);
     border-radius: 30px;
-    padding-left: 10px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
     width: 40%;
+    font-family: Helvetica;
+}
+.signup-content h2, .signup-content p {
+    text-align: center;
 }
 
 hr {
@@ -109,69 +132,85 @@ hr {
     position: absolute;
     top: 110;
     left: 0;
-    padding-top: 40px;
+    padding-top: 30px;
     padding-left: 40px;
     background: rgb(242, 240, 240);
-    border-right: rgb(215, 215, 215) solid 1px;
+    border-right: rgb(222, 222, 222) solid 1px;
 }
     
-.sidebar a {
+.sidebar a, .sidebar form, .sidebar h4 {
     padding: 8px;
     font-size: 14px;
     display: block;
-    font-family: monospace ;
     text-decoration: none;
-    color: black;
+    color: rgb(34, 34, 34);
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-left: 3px solid transparent;
+}
+.sidebar h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0;
 }
 
-.sidebar a:hover {
+.sidebar button {
+    border: transparent;
+}
+
+.sidebar a:hover, .sidebar form:hover {
     cursor: pointer;
     opacity: .7;
-    color: white;
-    border-bottom-color: navy;
-    border-style: solid;
     border-width: 3px;
+    color: black;
+    font-weight: bold;
+    border: 3px solid transparent;
+    background-color: rgb(227, 235, 238);
+    padding: 10px 20px;
 }
     
 .body-text {
     margin-left: 200px;
     font-size: 14px;
+    padding-top: 10px;
 }
 
 .body-text a, .question-show-text a {
     text-decoration: none;
+    color:rgb(184, 130, 186) 
 }
 .questions-new-text {
-    margin-left: 150px;
+    margin-left: 200px;
     font-size: 14px;
     padding-top: 50px;
 }
 
 .question-show-text {
-    margin-left: 150px;
+    margin-left: 200px;
     font-size: 14px;
     padding-top: 30px;
 }
 .about-text {
-    margin-left: 150px;
+    margin-left: 200px;
     font-size: 14px;
     padding-top: 30px;
     margin-right: 30px;
 }
 .question-edit-text {
-    margin-left: 150px;
+    margin-left: 200px;
     font-size: 14px;
     padding-top: 30px;
     margin-right: 30px;
 }
 .answer-new-text {
-    margin-left: 150px;
+    margin-left: 200px;
     font-size: 14px;
     padding-top: 30px;
     margin-right: 30px;
 }
 .answer-edit-text {
-    margin-left: 150px;
+    margin-left: 200px;
     font-size: 14px;
     padding-top: 30px;
     margin-right: 30px;
@@ -179,13 +218,13 @@ hr {
 
 h4 {
     font-weight: 100;
-    font-size: 12px;
+    font-size: 18px;
     margin-right: 50px;
 
 }
 h3 {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 22px;
 }
 
 h2 {
@@ -193,10 +232,39 @@ h2 {
 }
 
 .ask-question {
-    display: inline;
+    display: flex;
+    gap: 50px;
+    align-items: baseline;
+}
+.ask-question a {
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    margin-right: 550px;
+    width: auto;
+    font-size: 20px;
 }
 
-.question-edit-delete {
-    display: inline-flex;
-    justify-content: flex-end;
+.ask-question a:hover {
+    cursor: pointer;
+    opacity: .7;
+    border-width: 3px;
+    font-weight: bolder;
+    border: 3px solid transparent;
+    background-color: rgb(227, 235, 238);
+    padding: 10px 20px;
 }
+
+.question-edit-delete, .question-answer, .answer-edit-delete {
+    display: flex;
+    gap: 20px;
+    align-items: baseline;
+}
+.question-answer {
+    font-display: 0 auto;
+    margin-bottom: 60px;
+    margin-right: 50px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+

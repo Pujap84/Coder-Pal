@@ -34,6 +34,13 @@ body {
     background-color: rgb(227, 235, 238);
     padding: 40px;
 }
+.question-item:hover {
+    margin-bottom: 60px;
+    background-color: rgb(198, 219, 225);
+    padding: 40px;
+}
+
+
 
 .all-questions{
     font-display: 0 auto;

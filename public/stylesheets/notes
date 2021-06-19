@@ -10,16 +10,16 @@ body {
 }
 
 .header {
-    height: 100px;
+    height: 80px;
     background-size: 100% 100%;
     width: 100%;
     margin-left: 0px;
     margin-top: 0px;
-    color:rgb(152, 204, 222);
+    color:rgb(78, 105, 121);
     text-align: center;
     padding-top: 30px;
     padding-bottom: 20px;
-    background-color: rgb(62, 94, 113);
+    background-color: rgb(242, 240, 240);
     border-bottom: #e1e1e1 solid 1px;
     display: flex;
     justify-content: left;
@@ -31,26 +31,23 @@ body {
     max-height: 100%;
     justify-self: flex-start;
     margin-left: 30px;
-    border: 1px solid rgb(62, 94, 113);
 
  }
 
 .info {
     border: 1px solid transparent;
     padding: 10px;
-    background-color: white;
-
 }
 
 .question-item {
     margin-bottom: 60px;
     background-color: rgb(227, 235, 238);
-    padding: 30px;
+    padding: 40px;
 }
 .question-item:hover, .answer-edit-delete:hover {
     margin-bottom: 60px;
     background-color: rgb(216, 234, 238);
-    padding: 30px;
+    padding: 40px;
 }
 
 .all-questions{
@@ -59,7 +56,7 @@ body {
     margin-right: 50px;
     display: grid;
     gap: 30px;
-    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .logout-button {
@@ -151,14 +148,14 @@ hr {
 
 
 .sidebar {
-    height: 200%;
+    height: 120%;
     width: 130px;
     position: absolute;
     top: 110;
     left: 0;
     padding-top: 30px;
     padding-left: 40px;
-    background: rgb(216, 234, 238);
+    background: rgb(242, 240, 240);
     border-right: rgb(222, 222, 222) solid 1px;
 }
     
@@ -187,7 +184,7 @@ hr {
     color: black;
     font-weight: bold;
     border: 3px solid transparent;
-    background-color: rgb(105, 129, 143);
+    background-color: rgb(227, 235, 238);
     padding: 8px;
     font-size: 14px;
 }
@@ -225,6 +222,7 @@ h4 {
     font-weight: 100;
     font-size: 18px;
     margin-right: 50px;
+
 }
 h3 {
     font-weight: 600;
@@ -233,13 +231,6 @@ h3 {
 
 h2 {
     font-size: 36px;
-}
-.answer-edit-delete h4 {
-    background-color: white;
-    padding: 80px;
-    border: 1px, solid transparent;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 .ask-question, .question-answer {
@@ -260,8 +251,8 @@ h2 {
     font-size: 20px;
     border: 1px solid transparent;
     text-align: center;
-    background-color :rgb(184, 149, 186);
-    color: rgb(186, 220, 232);
+    background-color :rgb(203, 168, 205);
+    color: rgb(205, 220, 226);
 }
 
 
@@ -296,18 +287,10 @@ h2 {
 }
 
 
-.question-edit-delete {
+.question-edit-delete, .answer-edit-delete {
     display: flex;
     gap: 20px;
     align-items: baseline;
-
-}
-.edit-delete-answers-button {
-    display: flex;
-    gap: 20px;
-    align-items: baseline;
-
-    justify-content: center;
 }
 .all-answers {
     font-display: 0 auto;
@@ -321,5 +304,5 @@ h2 {
 .answer-edit-delete {
     margin-bottom: 60px;
     background-color: rgb(227, 235, 238);
-    padding: 30px;
+    padding: 40px;
 }

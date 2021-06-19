@@ -56,11 +56,13 @@
                 <div class="answer-edit-delete">   
                     <h4><%= answer['body'] %></h4>
                     <% if answer["user_id"] == session[:user_id] %>
-                        <a class="button" href="/questions/<%= question['id'] %>/answers/<%= answer['id'] %>/edit">Edit</a>
-                        <form action="/questions/<%= question['id'] %>/answers/<%= answer['id'] %>" method="POST">
-                            <input type="hidden" name="_method" value="DELETE">
-                            <input type="submit" value="delete">
-                        </form>
+                        <section class="edit-delete-answers-button">
+                            <a class="button" href="/questions/<%= question['id'] %>/answers/<%= answer['id'] %>/edit">Edit</a>
+                            <form action="/questions/<%= question['id'] %>/answers/<%= answer['id'] %>" method="POST">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <input type="submit" value="delete">
+                            </form>
+                        </section>
                     <% end %>
                 </div>
             <% end %>

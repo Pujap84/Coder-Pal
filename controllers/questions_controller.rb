@@ -29,11 +29,11 @@ get '/questions' do
 
 end
 
-get '/questions/create' do
+get '/questions/create', :auth => true do
     erb :'questions/new'
 end
 
-post '/questions' do
+post '/questions', :auth => true do
     title = params[:title]
     body = params[:body]
     votes = params[:votes];

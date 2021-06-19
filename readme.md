@@ -14,7 +14,7 @@ Click on it and have a play!
 ## How to Play
 Pseudocode
 1. Heading // CODER PAL//
-2. refer to [wireframe]() which helped me start this project
+2. refer to [wireframe](https://github.com/Pujap84/Project-2/tree/master/public/wireframes/project2%20wireframes) which helped me start this project
 3. psql table outline which can found on /wireframe/project-2-tables was then made to help me plan out my tables
 4. psql tables were created
 5. 

@@ -54,9 +54,13 @@ I have used the hover effets on most of my links and buttons
 
 ## Unresolved Problems
 
-- Unable to work on my votes and likes counters due to lack of time
+- Unable to work on my votes and likes counters code due to lack of time
 - Some css issues need to be fixed
+- imag css issue needs to be fixed
 
 # Wishlist
 - few other counters to be added
+- post order for questions as well answers need to be corrected
 - change nav bar to a horizontal collapsible bar
+- improved css
+- footer to be included

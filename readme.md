@@ -1,4 +1,4 @@
-## CoderPal
+## Coder Pal
 
 coderpal project
 Here is the app url https://still-peak-25908.herokuapp.com/
